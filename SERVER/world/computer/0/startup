@@ -1,0 +1,19 @@
+while true do
+
+local turbine = peripheral.wrap("BigReactors-Turbine_0")
+local reactor = peripheral.wrap("BigReactors-Reactor_0")
+local low = 300000
+local high = 800000
+
+if turbine.getEnergyStored() < low 
+then reactor.setAllControlRodLevels(0)
+end
+
+if turbine.getEnergyStored() > high
+then reactor.setAllControlRodLevels(100)
+end
+
+sleep(7)
+end
+
+
